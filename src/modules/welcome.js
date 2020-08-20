@@ -43,28 +43,28 @@ const Welcome = (props) =>{
     const androidOsURL ='Android Store';
     const classes = useStyles();    
     const operatingSystem = getOs(window) === 'iOs' ? iOsURL : androidOsURL;
+    const content = "The Fast Track Mobile App is a simple and easy way for job seekers affected by COVID-19 and employers to connect.";
 
     return(
         <div className={classes.main}>
             <Grid container spacing={3}>
                 <Grid item xs={1}></Grid>
-                <Grid item xs={5}><img src={fastTrack} className={classes.imgStyle} /></Grid>
+                <Grid item xs={5}><img src={fastTrack} className={classes.imgStyle} alt="Fast Track Hiring" /></Grid>
                 <Grid item xs={4}></Grid>
-                <Grid item xs={1}><img src={fbIcon} className={classes.imgStyle} /></Grid>
+                <Grid item xs={1}><img src={fbIcon} className={classes.imgStyle} alt="FB" /></Grid>
                 <Grid item xs={1}></Grid>
             </Grid>
             <br />
             <Grid container spacing={5}>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={3}>
-                   < Typography>Connecting jobseekers with companies actively looking for
-top-notch talent</Typography>
+    < Typography>{content}</Typography>
                 </Grid>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={3}>
-                    <Button className={classes.button}><Typography>Download App</Typography></Button>
+                    <Button className={classes.button} href={operatingSystem}><Typography>Download App</Typography></Button>
                     <br />
-                    <img src={fbIcon} className={classes.imgStore} /> <img src={fbIcon} className={classes.imgStore} />
+                    <img src={fbIcon} className={classes.imgStore} alt="Android Store" /> <img src={fbIcon} className={classes.imgStore} alt="App Store" />
                 </Grid>
                 <Grid item xs={2}></Grid>
             </Grid>
