@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage:`url(${companyBG})`,
         backgroundRepeat:'no-repeat',
         backgroundSize:'100%',
-        height: '85vh',
+        backgroundColor:'#f3f3f3',
     },
     highLight:{
         textAlign:'left'
@@ -45,7 +45,9 @@ const Companies = (props) =>{
         <Grid container>
             <Grid xs={1}></Grid>
             <Grid xs={10}>   
-                <Typography >Content about <b>companies</b> jobseekers lorem ipsum dolor sit amet, soleat fierent no mei, ocurreret molestiae gloriatur ei quo ei duo accumsan. No more than 24 words.</Typography>
+                <Typography >
+                    Find the best talent in the job market and connect with Subject Matter Experts to develop innovative business solutions
+                </Typography>
             </Grid>
             <Grid xs={1}></Grid>
         </Grid>
@@ -54,17 +56,16 @@ const Companies = (props) =>{
         <br />
             <Grid container spacing={3}>
                 <Grid xs={5}></Grid>
-                <Grid xs={6}> 
-                {   
-                    buildHightLight("High Light 1", 
-                    "Content description with no max of 14 words to avoid misalignment. so text will be presented fine")}
+                <Grid xs={6}>
+                    
+                    {buildHightLight("Connect with Talent", "Get connected to the ultra-talented resources that are only available due to the pandemic!")}
                     <br />
-                    {buildHightLight("High Light 2", 
-                    "Content description with no max of 14 words to avoid misalignment. so text will be presented fine")}
+                    {buildHightLight("Post Jobs", "Post your hottest job openings and receive applications  from \"Rock-Star\" resources that are on the market because of COVID-19")}
                     <br />
-                    {buildHightLight("High Light 3", 
-                    "Content description with no max of 14 words to avoid misalignment. so text will be presented fine")
-                }
+                    {buildHightLight("Video Applicants", "View short videos from great candidates explaining why they're perfect for your opening.")}
+                    <br />
+                    {buildHightLight("Find Solutions", "Get access to innovative business solutions like Nearshore project teams and customized Agile Pods to our partners that will charge up project productivity.")}
+                    <br />
                 </Grid>
                 <Grid xs={1}></Grid>
             </Grid>

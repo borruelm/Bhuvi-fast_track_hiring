@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, Button } from '@material-ui/core';
+import { Grid, Typography, Button, Link } from '@material-ui/core';
 import mainBg from '../img/welcome-bg.png';
 import fastTrack from '../img/logo.png';
 import fbIcon from '../img/fb_logo.png';
-
+import inIcon from '../img/in_logo.png';
+import stores from '../img/storesIcon.png';
 
 const useStyles = makeStyles((theme) => ({
     main:{
@@ -23,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     button:{
         backgroundColor:'#2AB376 !important',
         color:'white'
+    },
+    component:{
+        minWidth:350
     }
 }));
 
@@ -50,21 +54,22 @@ const Welcome = (props) =>{
             <Grid container spacing={3}>
                 <Grid item xs={1}></Grid>
                 <Grid item xs={5}><img src={fastTrack} className={classes.imgStyle} alt="Fast Track Hiring" /></Grid>
-                <Grid item xs={4}></Grid>
-                <Grid item xs={1}><img src={fbIcon} className={classes.imgStyle} alt="FB" /></Grid>
+                <Grid item xs={3}></Grid>
+                <Grid item xs={1}><Link href="https://www.facebook.com/fasttrackhiring"><img src={fbIcon} className={classes.imgStyle} alt="FB" /></Link></Grid>
+                <Grid item xs={1}><Link href="https://www.linkedin.com/company/fasttrack-hiring/"><img src={inIcon} className={classes.imgStyle} alt="Linked In" /></Link></Grid>
                 <Grid item xs={1}></Grid>
             </Grid>
             <br />
             <Grid container spacing={5}>
                 <Grid item xs={2}></Grid>
-                <Grid item xs={3}>
-    < Typography>{content}</Typography>
+                <Grid item xs={3} className={classes.component}>
+                    < Typography>{content}</Typography>
                 </Grid>
                 <Grid item xs={2}></Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} className={classes.component}>
                     <Button className={classes.button} href={operatingSystem}><Typography>Download App</Typography></Button>
-                    <br />
-                    <img src={fbIcon} className={classes.imgStore} alt="Android Store" /> <img src={fbIcon} className={classes.imgStore} alt="App Store" />
+                    <br /><br />
+                    <img src={stores} style={{width:120}} alt="stores" />
                 </Grid>
                 <Grid item xs={2}></Grid>
             </Grid>

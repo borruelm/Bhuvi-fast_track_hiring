@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage:`url(${bgJS})`,
         backgroundRepeat:'no-repeat',
         backgroundSize:'100%',
-        height: '85vh',
         minHeight: 400
     },
     highLight:{
@@ -55,21 +54,22 @@ const JobSeekers = (props) =>{
         <br /><br />
         <Typography variant="h4">How it works?</Typography>
         <br />
-        <Typography>Content about jobseekers lorem ipsum dolor sit amet, soleat fierent no mei, ocurreret molestiae gloriatur ei quo ei duo accumsan.</Typography>
+        <Typography>Post your resume and record short videos for employers seeking new talent.  Create a profile and identify the skills you need to reach your goals.</Typography>
         <br />
         <div className={classes.jobSeekerBg}>
             <Grid container spacing={3}>
                 <Grid item xs={1}></Grid>
                 <Grid item xs={6}>
-                    {buildHightLight("High Light 1", 
-                    "Content description with no max of 14 words to avoid misalignment. so text will be presented fine")}
+                    {buildHightLight("Hot Job Opportunities", "Find opportunities with top employers specifically hiring those affected by the COVID-19 pandemic.")}
                     <br />
-                    {buildHightLight("High Light 2", 
-                    "Content description with no max of 14 words to avoid misalignment. so text will be presented fine")}
+                    {buildHightLight("Level Up", "We’ll use your profile to show you the skills you need to add to your resume that will take you to the next level.")}
                     <br />
-                    {buildHightLight("High Light 3", 
-                    "Content description with no max of 14 words to avoid misalignment. so text will be presented fine")}
+                    {buildHightLight("Network", "Connect with Subject Matter Experts to gain valuable knowledge and enhance your skills")}
                     <br />
+                    {buildHightLight("Social Distance Friendly ", "Find QUALITY remote opportunities posted by hundreds of employers")}
+                    <br />
+                    {buildHightLight("Video Resume", "Record a short message telling employers why you're the perfect match")}
+                    
                 </Grid>
                 <Grid item xs={5}></Grid>
             </Grid>

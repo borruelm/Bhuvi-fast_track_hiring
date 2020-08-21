@@ -59,7 +59,7 @@ const Subscribe = ()=> {
 
     const subscribe = () =>{
         if(subscribing){
-            return <Typography>Thanks for subscribe</Typography>
+            return <Typography>Thanks for subscribing</Typography>
         }else{
             return <div>
                 <TextField placeholder="Enter your email" onBlur={checkEmail} id={'subscribe-1'}value={email} onChange={handleEmail}
