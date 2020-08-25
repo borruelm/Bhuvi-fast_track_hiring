@@ -50,7 +50,6 @@ const HighLights = (props) =>{
 
     const readMore = (text)=>{
         const wordArray = text.split(" ");
-        debugger
         if(wordArray.length > 13){
             return <button type="button" onClick={handleOpen}>
             Read MORE

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     jobSeekerBg:{
         backgroundImage:`url(${bgJS})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100%',
+        backgroundSize:'cover',
         minHeight: 400
     },
     highLight:{
@@ -40,8 +40,8 @@ const JobSeekers = (props) =>{
     const classes = useStyles();
 
     const buildHightLight = (title, content) =>{
-        return (<Grid container className={classes.highLight}>
-            <Grid xs={12}>
+        return (<Grid container className={classes.highLight} id="JobSeeker">
+            <Grid item xs={12}>
             <Typography variant="h4">{title}</Typography>
             <Typography>{shorten(content)}</Typography>
             <HighLights title={title} content={content} />

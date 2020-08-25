@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         height: '85vh',
         backgroundImage:`url(${mainBg})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100%'
+        backgroundSize:'cover'
     },
     imgStyle:{
         width:'100%'
@@ -50,7 +50,7 @@ const Welcome = (props) =>{
     const content = "The Fast Track Mobile App is a simple and easy way for job seekers affected by COVID-19 and employers to connect.";
 
     return(
-        <div className={classes.main}>
+        <div className={classes.main} id="welcome">
             <Grid container spacing={3}>
                 <Grid item xs={1}></Grid>
                 <Grid item xs={5}><img src={fastTrack} className={classes.imgStyle} alt="Fast Track Hiring" /></Grid>

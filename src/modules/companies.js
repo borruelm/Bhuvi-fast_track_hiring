@@ -12,12 +12,11 @@ const useStyles = makeStyles((theme) => ({
         color:'#030303',
         width:'100%',
         minHeight: '320px',
-        
     },
     companyBg:{
         backgroundImage:`url(${companyBG})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100%',
+        backgroundSize:'cover',
         backgroundColor:'#f3f3f3',
     },
     highLight:{
@@ -31,7 +30,7 @@ const Companies = (props) =>{
     
     const buildHightLight = (title, content) =>{
         return (<Grid container className={classes.highLight}>
-            <Grid xs={12}>
+            <Grid item xs={12}>
             <Typography variant="h4">{title}</Typography>
             <Typography>{shorten(content)}</Typography>
             <HighLights title={title} content={content} />
@@ -40,23 +39,23 @@ const Companies = (props) =>{
         );
     }
 
-    return <div className={classes.main}>
+    return <div className={classes.main} id="company">
         <br />
         <Grid container>
-            <Grid xs={1}></Grid>
-            <Grid xs={10}>   
+            <Grid item xs={1}></Grid>
+            <Grid item xs={10}>   
                 <Typography >
                     Find the best talent in the job market and connect with Subject Matter Experts to develop innovative business solutions
                 </Typography>
             </Grid>
-            <Grid xs={1}></Grid>
+            <Grid item xs={1}></Grid>
         </Grid>
         <div  className={classes.companyBg}>
         <br />
         <br />
             <Grid container spacing={3}>
-                <Grid xs={5}></Grid>
-                <Grid xs={6}>
+                <Grid item xs={5}></Grid>
+                <Grid item xs={6}>
                     
                     {buildHightLight("Connect with Talent", "Get connected to the ultra-talented resources that are only available due to the pandemic!")}
                     <br />
@@ -67,7 +66,7 @@ const Companies = (props) =>{
                     {buildHightLight("Find Solutions", "Get access to innovative business solutions like Nearshore project teams and customized Agile Pods to our partners that will charge up project productivity.")}
                     <br />
                 </Grid>
-                <Grid xs={1}></Grid>
+                <Grid item xs={1}></Grid>
             </Grid>
         </div>
         <br />

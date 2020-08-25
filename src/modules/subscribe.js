@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         height: '60vh',
         backgroundImage:`url(${subscribeBg})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100%'
+        backgroundSize:'cover'
     },
     input:{
         backgroundColor:'white'
@@ -30,7 +30,6 @@ const Subscribe = ()=> {
     const[errorEmail, setError] = useState("");
 
     const validateEmail = (mail) => {
-        debugger
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
            return (true);
         
@@ -53,8 +52,17 @@ const Subscribe = ()=> {
     }
 
     const sendSubscribe = ()=>{
-        setSubscribe(true);
+        if(email !== ''){
+            setSubscribe(true);
+        }
 
+        if(errorEmail ===''){
+            fetch('http://fasttrackhiring.com/services/API/postSubscriber.php', 
+            {
+                method:'POST',
+                body:JSON.stringify({"email": email}) 
+            });
+        }
     }
 
     const subscribe = () =>{
@@ -69,16 +77,16 @@ const Subscribe = ()=> {
     }
 
 
-    return <div className={classes.main}>
+    return <div className={classes.main} id={"subscribe"}>
         <br />
         <Typography variant={'h4'}>Subscribe Now!</Typography>
         <br />
         <Typography>We'll keep you up to date about Fast Track Hiring news, activities, and new app releases.</Typography>
         <br />
         <Grid container>
-            <Grid xs={3}></Grid>
-            <Grid xs={6}>{subscribe()}  </Grid>
-            <Grid xs={3}></Grid>
+            <Grid item xs={3}></Grid>
+            <Grid item xs={6}>{subscribe()}  </Grid>
+            <Grid item xs={3}></Grid>
         </Grid>
 
     </div>

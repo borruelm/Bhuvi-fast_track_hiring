@@ -25,23 +25,23 @@ const useStyles = makeStyles((theme) => ({
 const OurApp = ()=>{
     const classes = useStyles();
 
-    return <div className={classes.main}>
+    return <div className={classes.main} id="ourApp">
         <br />
         <Typography variant={'h4'}>Take a look at our app!</Typography>
         <br />
         <Grid container spacing={1}>
-            <Grid xs={4} className={classes.imgContainer}><img src={ourApp} style={{width:'100%'}} alt="FTH App 1"/></Grid>
-            <Grid xs={4} className={classes.imgContainer}><img src={ourApp2}  style={{width:'100%'}} alt="FTH App 2"/></Grid>
-            <Grid xs={4} className={classes.imgContainer}><img src={ourApp3}  style={{width:'100%'}} alt="FTH App 3"/></Grid>
+            <Grid item xs={4} className={classes.imgContainer}><img src={ourApp} style={{width:'100%'}} alt="FTH App 1"/></Grid>
+            <Grid item xs={4} className={classes.imgContainer}><img src={ourApp2}  style={{width:'100%'}} alt="FTH App 2"/></Grid>
+            <Grid item xs={4} className={classes.imgContainer}><img src={ourApp3}  style={{width:'100%'}} alt="FTH App 3"/></Grid>
         </Grid>
         <br />
         <Typography variant={'h4'}>download it!</Typography>
         <br />
         <Grid container spacing={5}>
-            <Grid xs={3}></Grid>
-            <Grid xs={3}><img src={androidStore} style={{width:'100%'}} alt="Andorid Store"/></Grid>
-            <Grid xs={3}><img src={appStore} style={{width:'100%'}} alt="iOS Store"/></Grid>
-            <Grid xs={3}></Grid>
+            <Grid item xs={3}></Grid>
+            <Grid item xs={3}><img src={androidStore} style={{width:'100%'}} alt="Andorid Store"/></Grid>
+            <Grid item xs={3}><img src={appStore} style={{width:'100%'}} alt="iOS Store"/></Grid>
+            <Grid item xs={3}></Grid>
         </Grid>
         <br />
         <br />
