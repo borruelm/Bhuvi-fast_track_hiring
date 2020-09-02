@@ -69,9 +69,9 @@ const Footer = () =>{
             <Grid item xs={1}></Grid>
             <Grid item xs={3}><img src={fastTrack} className={classes.imgFooter} alt="Fast Track Hiring" /></Grid>
             <Grid item xs={6} className={classes.miscelanius}>
-                <Link href="about"   className={classes.link}>About Us</Link> |
-                <a href="Privacy_Policy.html" className={classes.link}>Privacy Policy</a> | 
-                <a href="TermsAndConditions.html" className={classes.link}>Terms and conditions</a> |
+                <Link href="about" className={classes.link}>About Us</Link> |
+                <Link href="policy" className={classes.link}>Privacy Policy</Link> | 
+                <Link href="termsAndConditions" className={classes.link}>Terms and conditions</Link> |
                 <Link onClick={showContact}  className={classes.link}>Contact Us</Link>
                 <Modal open={contactUs}
                     onClose={closeContact}
