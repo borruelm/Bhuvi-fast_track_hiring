@@ -23,8 +23,9 @@ const TermsAndConditions = () =>{
         <Grid container>
             <Grid item xs={1}></Grid>
             <Grid item xs={10} className={classes.body}>
+                <br />
                 <Typography variant={"h4"}>Terms and Conditions</Typography><br />
-                <Typography>Last updated: August 02, 2020</Typography>
+                <Typography><i>Last updated: August 02, 2020</i></Typography><br />
                 <Typography>Please read these terms and conditions carefully before using Our Service.</Typography>
                 <br /><br />
                 <Typography variant={"h4"}>Interpretation and Definitions</Typography><br />
@@ -34,7 +35,7 @@ const TermsAndConditions = () =>{
                 <b>Definitions</b><br />
                 For the purposes of these Terms and Conditions:
                 </Typography>
-                <br /><br />
+                <br />
                 <ul>
                     <li><Typography>Application means the software program provided by the Company downloaded by You on any electronic device, named Fast Track Hiring COVID-19</Typography></li><br />
                     <li><Typography>Application Store means the digital distribution service operated and developed by Apple Inc. (Apple App Store) or Google Inc. (Google Play Store) in which the Application has been downloaded.</Typography></li><br />
@@ -50,9 +51,7 @@ const TermsAndConditions = () =>{
                     <li><Typography>Third-party Social Media Service means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</Typography></li><br />
                     <li><Typography>You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</Typography></li><br />
                 </ul>
-                <br /><br />
                 <Typography variant={"h4"}>Collecting and Using Your Personal Data</Typography><br />
-                <br />
                 <Typography variant={"h5"}>Types of Data Collected</Typography>
                 <br />
                 <Typography variant={"h6"}>Personal Data</Typography>
@@ -70,7 +69,8 @@ const TermsAndConditions = () =>{
                 <Typography>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</Typography><br />
                 <Typography>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</Typography><br />
                 <Typography>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</Typography><br />
-                <b>Information Collected while Using the Application</b>
+                <Typography variant={"h6"}><b>Information Collected while Using the Application</b></Typography>
+                <br />
                 <Typography>While using Our Application, in order to provide features of Our Application, We may collect, with your prior permission:</Typography><br />
                 <ul>
                     <li><Typography>Information regarding your location</Typography></li><br />
